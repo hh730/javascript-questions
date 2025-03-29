@@ -39,7 +39,7 @@ function SDK(){
     }
     function send(){
      sendAnalytics() 
-    }
+    }Sa
     return {logEvent,send}
   }
   const sdk=SDK();
