@@ -27,7 +27,7 @@ const retryWithDelay = (
       });
   });
 
-const retryWithDelay2 = async (
+const retryWithDelayAsync = async (
   operation,
   retries = 3,
   delay = 50,
@@ -40,7 +40,7 @@ const retryWithDelay2 = async (
       return Promise.reject(finalErr);
     }
     await wait(delay);
-    return retryWithDelay2(operation, retries - 1, delay, finalErr);
+    return retryWithDelayAsync(operation, retries - 1, delay, finalErr);
   }
 };
 
